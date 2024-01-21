@@ -2,6 +2,9 @@ package org.example;
 
 
 import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class Main {
 
@@ -53,6 +56,7 @@ public class Main {
     private static void buildIndex(TextProcessingOption textProcessingOption) {
         String indexPath = Utils.getIndexPathBasedOnTextProcessingOption(textProcessingOption);
         System.out.println("Start build index for: " + indexPath);
+        createFolder(indexPath);
         if (checkIfIndexIsAlreadyBuild(indexPath)) {
             System.out.println("Index is already built!");
             return;
@@ -68,6 +72,18 @@ public class Main {
         System.out.println("End build index for: " + indexPath);
     }
 
+    private static void createFolder(String indexPath) {
+        Path folderPath = Paths.get(indexPath);
+
+        if (!Files.exists(folderPath)) {
+            try {
+                Files.createDirectories(folderPath);
+                System.out.println("Created folder at: " + folderPath);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
     /**
      * Check if the folder where the index should be build is empty or not
      */
