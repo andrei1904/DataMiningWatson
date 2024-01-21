@@ -22,10 +22,10 @@ dependencies {
     implementation 'org.apache.lucene:lucene-queryparser:9.9.1'
 
     implementation 'edu.stanford.nlp:stanford-corenlp:4.5.5'
-    implementation 'edu.stanford.nlp:stanford-corenlp:4.5.5:models'
+//    implementation 'edu.stanford.nlp:stanford-corenlp:4.5.5:models'
 
     implementation 'com.robrua.nlp:easy-bert:1.0.3'
-    implementation 'com.robrua.nlp.models:easy-bert-uncased-L-12-H-768-A-12:1.0.0'
+//    implementation 'com.robrua.nlp.models:easy-bert-uncased-L-12-H-768-A-12:1.0.0'
 }
 
 application {
