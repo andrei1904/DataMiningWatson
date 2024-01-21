@@ -56,6 +56,7 @@ public class Main {
     private static void buildIndex(TextProcessingOption textProcessingOption) {
         String indexPath = Utils.getIndexPathBasedOnTextProcessingOption(textProcessingOption);
         System.out.println("Start build index for: " + indexPath);
+        createFolder(Utils.INDEX_PATH);
         createFolder(indexPath);
         if (checkIfIndexIsAlreadyBuild(indexPath)) {
             System.out.println("Index is already built!");

@@ -17,6 +17,7 @@ public final class Utils {
     private static final String INDEX_PATH_STOP_WORDS_STEMMING = "src\\main\\resources\\Index\\IndexSTOPWORDSSTEMMING";
     private static final String INDEX_PATH_LEMMATIZATION = "src\\main\\resources\\Index\\IndexLEMMATIZATION";
 
+    public static final String INDEX_PATH = "src\\main\\resources\\Index";
     public static final String WIKIPEDIA_DATASET_DIRECTORY_PATH = "src\\main\\resources\\WikiPages";
     public static final String JEOPARDY_QUESTIONS_PATH = "src\\main\\resources\\Jeopardy\\questions.txt";
 
